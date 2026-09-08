@@ -1,20 +1,9 @@
-const readline = require('readline');
-const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
- 
-rl.question('Enter first number: ', (input1) => {
-  rl.question('Enter second number: ', (input2) => {
-    rl.question('Enter third number: ', (input3) => {
-      const num1 = parseFloat(input1);
-      const num2 = parseFloat(input2);
-      const num3 = parseFloat(input3);
- 
-      const average = (num1 + num2 + num3) / 3;
- 
-      console.log();
-      console.log(`The average of ${num1}, ${num2}, ${num3} is ${average}`);
- 
-      rl.close();
-    });
-  });
-});
- 
+const readline = require('readline-sync');
+
+const number1 = readline.question('Enter first number:');
+const number2 = readline.question('Enter second number:');
+const number3 = readline.question('Enter third number:');
+
+const avg = (number1 + number2 + number3) / 3
+
+console.log('\nThe average of ' + firstNumber +', ' + secondNumber + ',' + thirdNumber + ' is ' + average);
